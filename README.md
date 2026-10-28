@@ -1,5 +1,10 @@
 **Tutorial Path:** https://learn.nareshit.com/courses/take/new-course-1343/multimedia/79328352-session-12-27th-oct 
 
+**Fix jupyter notebook path issue**
+
+<img width="555" height="805" alt="image" src="https://github.com/user-attachments/assets/d126ad96-d9b9-452c-9f68-305b1cb63413" />
+
+
 I am using **Anaconda Prompt** to open a notebook:
 
 (base) C:\Users\Hi>cd /d D:\Study\FDE\myGitLocalRepos\Python-Practice-FDE\FDE-Pyton-practice
