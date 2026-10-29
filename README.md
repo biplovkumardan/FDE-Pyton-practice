@@ -30,3 +30,23 @@ I am using **Anaconda Prompt** to open a notebook:
 
 **To Update the GitHub with updated file:**
 <img width="1117" height="747" alt="image" src="https://github.com/user-attachments/assets/a776346e-5901-4062-97a5-4bfb814772aa" />
+
+
+***Issue 3:***
+
+I think i know the reason for this merge issue. I used to update ReadMe.md file directly in GitHub. But the ipynb files, I am updating in my local working directory and try to push my ipynb files. That time this merge conflict is coming. Help me to rectify my mistake and correct steps to do the merge or pull before push in github
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+
+You hit the nail on the head! Your diagnosis is 100% correct.
+
+When you edit files (like README.md) directly on the GitHub website, GitHub creates a brand-new commit on the remote repository. Your local laptop doesn't know about that commit yet. Meanwhile, when you work on your .ipynb files locally and try to push, Git realizes that the remote history and your local history have diverged, resulting in that merge prompt.
+
+To avoid this headache in the future, you should follow the Golden Rule of Git: Always Pull Before You Push (and ideally, pull before you even start working).
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
