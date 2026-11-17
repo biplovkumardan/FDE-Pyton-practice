@@ -1,0 +1,20 @@
+[project]
+name = "uv-env-python-approach"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Biplov Kumar Dan", email = "biplovkumardan@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "openai>=3.52.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+uv-env-python-approach = "uv_env_python_approach:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
