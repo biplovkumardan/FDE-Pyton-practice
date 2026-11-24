@@ -866,3 +866,119 @@ db.dropDatabase()
 - `students` is the collection name.
 - Documents are stored in BSON format.
 - `mongosh` is the MongoDB command-line shell.
+
+---
+
+Here are the essential MongoDB commands you'll use most often in `mongosh`:
+
+## 1. Database & Collection Navigation
+
+- `show dbs` — Lists all databases on the server.
+- `use <db_name>` — Switches to or creates a database.
+
+```javascript
+use FDE
+```
+
+- `db` — Shows the currently active database.
+- `show collections` — Lists all collections in the current database.
+- `db.createCollection("<collection_name>")` — Explicitly creates a new collection.
+
+```javascript
+db.createCollection("<collection_name>")
+```
+
+## 2. Create (Insert Documents)
+
+- `db.<collection>.insertOne({ ... })` — Inserts a single document.
+
+```javascript
+db.<collection>.insertOne({ ... })
+```
+
+- `db.<collection>.insertMany([ { ... }, { ... } ])` — Inserts multiple documents at once.
+
+```javascript
+db.<collection>.insertMany([ { ... }, { ... } ])
+```
+
+## 3. Read (Query Documents)
+
+- `db.<collection>.find()` — Returns documents in the collection.
+
+```javascript
+db.<collection>.find()
+```
+
+- `db.<collection>.find({ course: "Python" })` — Finds documents matching a filter condition.
+
+```javascript
+db.<collection>.find({ course: "Python" })
+```
+
+- `db.<collection>.findOne({ name: "Ravi" })` — Returns the first matching document.
+
+```javascript
+db.<collection>.findOne({ name: "Ravi" })
+```
+
+- `db.<collection>.countDocuments({ age: { $gte: 25 } })` — Counts matching documents using the `$gte` operator for greater than or equal to.
+
+```javascript
+db.<collection>.countDocuments({ age: { $gte: 25 } })
+```
+
+## 4. Update Documents
+
+- `db.<collection>.updateOne({ name: "Veera" }, { $set: { age: 32 } })` — Updates a specific field with `$set` on the first matching document.
+
+```javascript
+db.<collection>.updateOne({ name: "Veera" }, { $set: { age: 32 } })
+```
+
+- `db.<collection>.updateMany({ course: "AWS" }, { $set: { active: true } })` — Updates a field across all matching documents.
+
+```javascript
+db.<collection>.updateMany({ course: "AWS" }, { $set: { active: true } })
+```
+
+## 5. Delete Documents & Collections
+
+- `db.<collection>.deleteOne({ name: "Kiran" })` — Deletes the first matching document.
+
+```javascript
+db.<collection>.deleteOne({ name: "Kiran" })
+```
+
+- `db.<collection>.deleteMany({ age: { $lt: 20 } })` — Deletes all documents matching the filter.
+
+```javascript
+db.<collection>.deleteMany({ age: { $lt: 20 } })
+```
+
+- `db.<collection>.drop()` — Deletes an entire collection.
+
+```javascript
+db.<collection>.drop()
+```
+
+- `db.dropDatabase()` — Deletes the currently selected database. Use carefully!
+
+```javascript
+db.dropDatabase()
+```
+
+## 6. Shell Helpers
+
+- `help` — Shows built-in shell help.
+- `cls` or `clear` — Clears the shell screen.
+- `exit` — Exits the `mongosh` shell.
+
+```javascript
+help
+cls
+clear
+exit
+```
+
+Which of these operations do you want to try out first on your `FDE.students` collection—filtering (`find`), adding a student (`insertOne`), or updating a field (`updateOne`)?
