@@ -1,0 +1,18 @@
+1) Run below curl command in bash terminal 
+        curl -X GET http://localhost:5000/employees
+2) In VS code POSTMAN, you acn also run this below:
+    http://localhost:5000/employees
+
+curl -X GET http://localhost:5000/users
+
+curl -X POST http://localhost:5000/users/add \
+  -H "Content-Type: application/json" \
+  -d '{"name":"John Doe","email":"john@example.com"}'
+
+curl -X PUT http://localhost:5000/users/update/1 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Biplov Updated","email":"john.updated@example.com"}'
+
+curl -X DELETE http://localhost:5000/users/delete/1
+
+IMPORTANT: https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cazure-cli-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli
